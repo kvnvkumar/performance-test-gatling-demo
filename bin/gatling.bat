@@ -26,7 +26,7 @@ set "DEFAULT_GATLING_HOME=%cd%"
 cd %OLD_DIR%
 
 rem if gatling home is correctly set
-if exist "%GATLING_HOME%\bin\gatling.bat" goto gotHome
+if exist "C:\performance-test-gatling-demo\bin\gatling.bat" goto gotHome
 rem if gatling home is not correctly set
 if not "%GATLING_HOME%" == "" goto badHome
 rem if not try current folder
@@ -38,9 +38,9 @@ goto :noHome
 
 :gotHome
 
-if not defined GATLING_CONF set GATLING_CONF="%GATLING_HOME%"\conf
+if not defined GATLING_CONF set GATLING_CONF="C:\performance-test-gatling-demo"\conf
 
-echo GATLING_HOME is set to "%GATLING_HOME%"
+echo GATLING_HOME is set to "C:\performance-test-gatling-demo"
 
 set JAVA_OPTS=-Xmx1G -XX:+UseG1GC -XX:MaxGCPauseMillis=30 -XX:G1HeapRegionSize=16m -XX:InitiatingHeapOccupancyPercent=75 -XX:+ParallelRefProcEnabled -XX:+PerfDisableSharedMem -XX:+HeapDumpOnOutOfMemoryError -XX:MaxInlineLevel=20 -XX:MaxTrivialSize=12 -XX:-UseBiasedLocking %JAVA_OPTS%
 

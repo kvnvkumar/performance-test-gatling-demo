@@ -11,7 +11,7 @@ class AssignmentSimulation extends Simulation {
 
 	val httpProtocol = http
 		.baseUrl("https://s2.demo.opensourcecms.com") //s2.demo.opensourcecms.com
-		.inferHtmlResources(BlackList(""".*\.js""", """.*\.css""", """.*\.png""", """.*\.jpeg""", """.*\.gif"""), WhiteList("https://${p_baseURL}/*"))
+		.inferHtmlResources(BlackList(""".*\.js""", """.*\.css""", """.*\.png""", """.*\.jpeg""", """.*\.gif"""), WhiteList("https://s2.demo.opensourcecms.com/*"))
 		.acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
 		.acceptEncodingHeader("gzip, deflate")
 		.acceptLanguageHeader("en-US,en;q=0.9")
@@ -20,7 +20,7 @@ class AssignmentSimulation extends Simulation {
 	val headers_0 = Map("upgrade-insecure-requests" -> "1")
 
 	val headers_1 = Map(
-		"Origin" -> "https://${p_baseURL}",
+		"Origin" -> "https://s2.demo.opensourcecms.com",
 		"Upgrade-Insecure-Requests" -> "1")
 
 	val headers_2 = Map(
@@ -33,8 +33,8 @@ class AssignmentSimulation extends Simulation {
 
 	val headers_8 = Map("Upgrade-Insecure-Requests" -> "1")
 
-    //val uri1 = "https://urldefense.com/v3/__https:/${p_baseURL}/orangehrm/symfony/web/index.php/auth/login__;!!ETvj9GWOF6bnm07gjzU!HnfgbL6jJK7R7SCIKNlaFWqI5hPVchl3AxtoZMkWSkJ7db-srwj-Hkow-SjNhjtILiM$"
-    val uri1 = "https://${p_baseURL}/orangehrm/symfony/web/index.php/auth/login"
+    //val uri1 = "https://urldefense.com/v3/__https:/s2.demo.opensourcecms.com/orangehrm/symfony/web/index.php/auth/login__;!!ETvj9GWOF6bnm07gjzU!HnfgbL6jJK7R7SCIKNlaFWqI5hPVchl3AxtoZMkWSkJ7db-srwj-Hkow-SjNhjtILiM$"
+    val uri1 = "https://s2.demo.opensourcecms.com/orangehrm/symfony/web/index.php/auth/login"
 
 	  val Think_time = 5
 	  val csvFeeder = csv(fileName="C:\\gatling-charts-highcharts-bundle-3.5.1\\user-files\\resources\\data\\Users_details.csv").circular

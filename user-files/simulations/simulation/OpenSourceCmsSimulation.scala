@@ -10,7 +10,7 @@ import io.gatling.jdbc.Predef._
 class OpenSourceCmsSimulation extends Simulation {
 
 	val httpProtocol = http
-		.baseUrl("https://${p_baseURL}")
+		.baseUrl("https://s2.demo.opensourcecms.com")
 		.inferHtmlResources(BlackList(), WhiteList())
 
 	val headers_0 = Map(
@@ -28,7 +28,7 @@ class OpenSourceCmsSimulation extends Simulation {
 		"Accept-Encoding" -> "gzip, deflate, br",
 		"Accept-Language" -> "en-US,en;q=0.9",
 		"Cache-Control" -> "max-age=0",
-		"Origin" -> "https://${p_baseURL}",
+		"Origin" -> "https://s2.demo.opensourcecms.com",
 		"Upgrade-Insecure-Requests" -> "1",
 		"User-Agent" -> "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36")
 
@@ -53,7 +53,7 @@ class OpenSourceCmsSimulation extends Simulation {
 		"Upgrade-Insecure-Requests" -> "1",
 		"User-Agent" -> "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36")
 
-      val uri2 = "https://${p_baseURL}/orangehrm/symfony/web/index.php/auth/login"
+      val uri2 = "https://s2.demo.opensourcecms.com/orangehrm/symfony/web/index.php/auth/login"
 	  val Think_time = 5
 	  val csvFeeder = csv(fileName="C:\\gatling-charts-highcharts-bundle-3.5.1\\user-files\\resources\\data\\Users_details.csv").circular
 	  //val csvFeeder = csv("data/Users_details.csv").circular
