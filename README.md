@@ -29,7 +29,7 @@ For Running the Gatling test :
 3. Results will be available in C:\gatling-charts-highcharts-bundle-3.5.1\results folder and exact path of results will be mentioned on console.
 4. For logs, refer C:\gatling-charts-highcharts-bundle-3.5.1\bin\logs.
 
-Note : I have created Gatling scenario with 1 user and perform operations for duration of 60 seconds with think time of 5 Seconds.
+Note : I have created Gatling scenario with 1 user and perform operations for duration of 60 seconds one script and 90 seconds second script with think time of 5 Seconds.
 
 Improvements Recommended  
 
