@@ -45,7 +45,7 @@ Related to Report Analysis :
 
 1. client side objects caching need to be implemented
 2. Each Request URL doing redirecting and need to understand the requirement of this implementation
-3. There is no test data available in Application and without that can't provide the baseline details.
+3. To understand baseline application performance atleast we should have minimum test data in the application under test.
 
 
 
